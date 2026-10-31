@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Judgment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css">
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <span>AI percentage: <%= percent.toFixed(2) %>%</span>
+<% judgment.forEach(t => { %>
+    <div class="text" <%= t.portrait ? `sans=${t.portrait}` : "" %>>
+    <% t.text.forEach(e => { %>
+        <span><%- e %></span>
+    <% }) %>
+    </div>
+<% }) %>
+
+<% if (i === 7) { %>
+<iframe src="https://g-dr-wiki.github.io/c2-sans-fight" style="width: 100%; height: 80vh; border: 4px solid white; overflow: hidden; background: black; display: inline-block;"></iframe>
+<% } %>
+</body>
+
+</html>
